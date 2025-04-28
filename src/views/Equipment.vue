@@ -1,0 +1,307 @@
+<template>
+  <div class="equipment-slider-container">
+    <div class="equipment-slider">
+      <transition name="fade">
+        <div v-if="slides[currentSlide]" :key="currentSlide" class="slide"
+          :style="{ backgroundImage: slides[currentSlide].background }">
+          <div class="content">
+            <h2 class="title">EQUIPMENT</h2>
+            <div class="row items-center justify-between">
+              <h2 class="subtitle">{{ slides[currentSlide].subtitle }}</h2>
+              <div class="custom-download-btn">
+                <div class="left">
+                  <font-awesome-icon :icon="['fas', 'file-pdf']" />
+                </div>
+                <div class="right">
+                  Download
+                </div>
+              </div>
+            </div>
+            <div class="description-box">
+              <p class="description-text">{{ slides[currentSlide].description }}</p>
+            </div>
+          </div>
+          <!-- Botones de navegación izquierda y derecha -->
+          <div class="nav-button left" @click="prevSlide">‹</div>
+          <div class="nav-button right" @click="nextSlide">›</div>
+        </div>
+      </transition>
+    </div>
+  </div>
+  <div class="equipment-navigation">
+    <div v-for="(slide, index) in slides" :key="'nav-btn-' + index" class="equipment-button"
+      :class="{ active: index === currentSlide, 'equipment-disabled': index !== currentSlide }"
+      @click="goToSlide(index)" :style="index === currentSlide ? { backgroundImage: slide.background } : {}">
+      <span class="equipment-label">{{ slide.label }}</span>
+      <img :src="slide.thumbnail" alt="thumbnail" class="equipment-icon" />
+    </div>
+  </div>
+
+</template>
+
+<script setup>
+import { ref } from 'vue'
+
+import Slide1 from '../assets/ammonite.jpg'
+import Slide2 from '../assets/cone.jpg'
+import Slide3 from '../assets/rossfelder.jpg'
+import ico1 from '../assets/ammoIco.svg'
+import ico2 from '../assets/coneIco.svg'
+import ico3 from '../assets/rossIco.svg'
+ 
+const slides = [
+  {
+    background: `linear-gradient(rgba(8, 76, 42, 0.9), rgba(8, 76, 42, 0.9)), url(${Slide1})`,
+    thumbnail: ico1,
+    label: 'Ammonite',
+    subtitle: 'AMMONITE',
+    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.'
+  },
+  {
+    background: `linear-gradient(rgba(19, 95, 137, 0.9), rgba(19, 95, 137, 0.9)), url(${Slide2})`,
+    thumbnail: ico2,
+    label: 'Cone',
+    subtitle: 'CONE',
+    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.'
+  },
+  {
+    background: `linear-gradient(rgba(124, 11, 19, 0.9), rgba(124, 11, 19, 0.9)), url(${Slide3})`,
+    thumbnail: ico3,
+    label: 'Rossfelder p-5',
+    subtitle: 'ROSSFELDER P-5',
+    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.'
+  }
+]
+
+const currentSlide = ref(0)
+
+const prevSlide = () => {
+  currentSlide.value = (currentSlide.value - 1 + slides.length) % slides.length
+}
+
+const nextSlide = () => {
+  currentSlide.value = (currentSlide.value + 1) % slides.length
+}
+
+const goToSlide = (index) => {
+  currentSlide.value = index;
+}
+</script>
+
+<style scoped>
+/* tu mismo CSS de antes, más la transición fade */
+
+.equipment-slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 684px;
+  margin-top: -11vh;
+}
+
+.equipment-slider {
+  position: relative;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  box-sizing: border-box;
+  color: white;
+}
+
+.content {
+  min-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 50pt;
+  font-weight: 900;
+  color: white;
+  opacity: 35%;
+  margin-bottom: 210px;
+  mix-blend-mode: hard-light;
+}
+
+.subtitle {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: Roboto, sans-serif;
+  margin-bottom: 20px;
+}
+
+.custom-download-btn {
+  display: flex;
+  width: 274px;
+  height: 57px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  text-transform: none;
+}
+
+.custom-download-btn .left,
+.custom-download-btn .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.custom-download-btn .left {
+  width: 30%;
+  background-color: white;
+  color: #206988;
+  font-size: 35px;
+}
+
+.custom-download-btn .right {
+  flex: 1;
+  padding-left: 10px;
+  width: 70%;
+  background-color: #206988;
+  color: white;
+  border-radius: 8px;
+}
+
+.custom-download-btn:hover {
+  background-color: #206988;
+}
+
+.custom-download-btn:hover .left {
+  background-color: #206988;
+  color: white;
+}
+
+.custom-download-btn:hover .right {
+  background-color: white;
+  color: #206988;
+}
+
+.description-box {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  margin-top: 10px;
+  max-width: 1200px;
+  max-height: auto;
+  border-radius: 8px;
+}
+
+.description-text {
+  font-size: 18px;
+  font-weight: 300;
+  font-family: Roboto, sans-serif;
+  margin: 0;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 80px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 2;
+  user-select: none;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.nav-button.left {
+  left: 20px;
+}
+
+.nav-button.right {
+  right: 20px;
+}
+
+/* Animación fade tipo Quasar */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.equipment-navigation {
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  margin: 40px auto;
+  gap: 189px;
+}
+
+.equipment-button {
+  width: 274px;
+  height: 57px;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.equipment-button:hover {
+  background-color: #206988;
+  color: white;
+}
+
+.equipment-button.active {
+  background-color: #206988;
+  color: white;
+}
+
+.equipment-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin: 0;
+}
+
+.equipment-label {
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.equipment-button.equipment-disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: pointer;
+  /* ahora sí funciona */
+}
+
+.equipment-button.equipment-disabled:hover {
+  background-color: #bbbbbb;
+}
+
+.equipment-button.equipment-disabled .equipment-icon {
+  filter: grayscale(100%);
+}
+</style>
