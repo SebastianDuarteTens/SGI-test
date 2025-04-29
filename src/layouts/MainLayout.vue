@@ -8,14 +8,15 @@
                 </div>
                 <!-- navigation buttons -->
                 <div class="row q-gutter-sm">
-                    <q-btn class="navBtn" flat unelevated :ripple="false" label="Home" to="/"
+                    <q-btn class="navBtn" flat unelevated :class="$route.path === '/' ? 'active-link' : ''"
+                        :ripple="false" label="Home" to="/"
                         style="color: #206988; padding: 20px; font-style: normal;" />
-                    <q-btn class="navBtn" flat unelevated :ripple="false" label="The Company" to="/company"
-                        style="color: #206988; padding: 20px;" />
-                    <q-btn class="navBtn" flat unelevated :ripple="false" label="Equipment" to="/equipment"
-                        style="color: #206988; padding: 20px;" />
-                    <q-btn class="navBtn" flat unelevated :ripple="false" label="Contact" to="/contact"
-                        style="color: #206988; padding: 20px;" />
+                    <q-btn class="navBtn" flat unelevated :class="$route.path === '/company' ? 'active-link' : ''"
+                        :ripple="false" label="The Company" to="/company" style="color: #206988; padding: 20px;" />
+                    <q-btn class="navBtn" flat unelevated :class="$route.path === '/equipment' ? 'active-link' : ''"
+                        :ripple="false" label="Equipment" to="/equipment" style="color: #206988; padding: 20px;" />
+                    <q-btn class="navBtn" flat unelevated :class="$route.path === '/contact' ? 'active-link' : ''"
+                        :ripple="false" label="Contact" to="/contact" style="color: #206988; padding: 20px;" />
                 </div>
             </div>
         </q-header>
@@ -46,7 +47,8 @@
                     <a href="https://x.com" target="_blank" aria-label="Twitter/X" class="no-decoration q-mx-xs">
                         <font-awesome-icon :icon="['fab', 'x-twitter']" class="social-icon" />
                     </a>
-                    <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="no-decoration q-mx-xs">
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"
+                        class="no-decoration q-mx-xs">
                         <font-awesome-icon :icon="['fab', 'instagram']" class="social-icon" />
                     </a>
                 </div>
@@ -94,12 +96,12 @@ footer {
 
 a {
     padding: 8px;
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 a:visited {
-  color: inherit;
+    color: inherit;
 }
 
 .social-icon {
@@ -110,6 +112,11 @@ a:visited {
 .social-icon:hover {
     opacity: 100%;
 }
-</style>
 
-<font-awesome-icon :icon="['fab', 'linkedin-in']" />
+.active-link {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+    font-weight: bold;
+}
+</style>

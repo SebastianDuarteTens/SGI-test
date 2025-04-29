@@ -89,8 +89,6 @@ const goToSlide = (index) => {
 </script>
 
 <style scoped>
-/* tu mismo CSS de antes, más la transición fade */
-
 .equipment-slider-container {
   position: relative;
   overflow: hidden;
@@ -235,7 +233,6 @@ const goToSlide = (index) => {
   right: 20px;
 }
 
-/* Animación fade tipo Quasar */
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s ease;
@@ -294,7 +291,6 @@ const goToSlide = (index) => {
   background-color: #cccccc;
   color: #666666;
   cursor: pointer;
-  /* ahora sí funciona */
 }
 
 .equipment-button.equipment-disabled:hover {

@@ -28,12 +28,12 @@
 
 .hero-text {
   font-family: 'Roboto', sans-serif;
-  font-weight: 400; /* Regular */
-  font-size: 32px; /* 32 puntos */
+  font-weight: 400;
+  font-size: 32px;
   color: #4D4D4D;
 }
 .highlight {
-  color: #0E2D3B; /* color rojo para resaltar */
+  color: #0E2D3B;
   font-weight: bold;
 }
 </style>

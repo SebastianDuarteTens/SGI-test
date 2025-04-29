@@ -1,6 +1,6 @@
 <template>
-  <div class="q-pa-xl bg-white">
-    <div class="row items-center" style="max-width: 1200px; margin: auto;">
+  <div class="q-pa-xl bg-white" style="margin-top: -50px;">
+    <div class="row items-center" style="max-width: 1200px;">
 
       <!-- Imagen fija -->
       <div style="width: 440px; height: 660px;">
@@ -93,7 +93,7 @@
 
 .description-text {
   color: #666666;
-  font-size: 18pt; /* según lo que comentaste para párrafos */
+  font-size: 18pt;
   font-weight: 300;
   font-family: 'Roboto', sans-serif;
   margin: 0;
