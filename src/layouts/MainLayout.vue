@@ -38,19 +38,18 @@
 
                 <!-- social media icons -->
                 <div class="row items-center q-gutter-x-sm">
-                    <a href="https://linkedin.com/" target="_blank" aria-label="Linkedin" class="no-decoration q-mx-xs">
+                    <router-link to="/linkedin" aria-label="LinkedIn" class="no-decoration q-mx-xs">
                         <font-awesome-icon :icon="['fab', 'linkedin-in']" class="social-icon" />
-                    </a>
-                    <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="no-decoration q-mx-xs">
+                    </router-link>
+                    <router-link to="/facebook" aria-label="Facebook" class="no-decoration q-mx-xs">
                         <font-awesome-icon :icon="['fab', 'facebook-f']" class="social-icon" />
-                    </a>
-                    <a href="https://x.com" target="_blank" aria-label="Twitter/X" class="no-decoration q-mx-xs">
+                    </router-link>
+                    <router-link to="/x" aria-label="X" class="no-decoration q-mx-xs">
                         <font-awesome-icon :icon="['fab', 'x-twitter']" class="social-icon" />
-                    </a>
-                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"
-                        class="no-decoration q-mx-xs">
+                    </router-link>
+                    <router-link to="/instagram" aria-label="Instagram" class="no-decoration q-mx-xs">
                         <font-awesome-icon :icon="['fab', 'instagram']" class="social-icon" />
-                    </a>
+                    </router-link>
                 </div>
 
             </div>
