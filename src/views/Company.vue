@@ -4,7 +4,7 @@
 
       <!-- Imagen fija -->
       <div style="width: 440px; height: 660px;">
-        <img src="https://placehold.co/440x660" alt="Company image" class="full-height"
+        <img src="../assets/img.jpg" alt="Company image" class="full-height"
           style="width: 100%; object-fit: cover; border-radius: 18px;" />
       </div>
 

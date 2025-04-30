@@ -25,7 +25,7 @@
           </div>
           <div>
             <h3 class="text-subtitle1 q-mb-xs subtitle-email">Email Us</h3>
-            <p class="text-body2 q-mb-none description">catwell@seafloorgetech.com </p>
+            <p class="text-body2 q-mb-none description">catwell@seafloorgeotech.com </p>
           </div>
         </div>
       </div>
@@ -211,7 +211,7 @@ async function sendEmail() {
 
 .subtitle-call {
   color: #8F1313;
-  font-size: 25px;
+  font-size: 20pt;
   font-weight: 600;
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -219,7 +219,7 @@ async function sendEmail() {
 
 .subtitle-email {
   color: #1F6887;
-  font-size: 25px;
+  font-size: 20pt;
   font-weight: 600;
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -227,7 +227,7 @@ async function sendEmail() {
 
 .description {
   color: #666666;
-  font-size: 18pt;
+  font-size: 16pt;
   /* según lo que comentaste para párrafos */
   font-weight: 300;
   font-family: 'Roboto', sans-serif;
