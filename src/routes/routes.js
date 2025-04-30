@@ -7,8 +7,10 @@ import Facebook from "../views/fb.vue"
 import Intagram from "../views/ig.vue"
 import LinkedIn from "../views/lkdn.vue"
 import X from "../views/x.vue"
+import Youtube from "../views/yt.vue"
 
 import { createRouter, createWebHashHistory } from "vue-router"
+import { biYoutube } from "@quasar/extras/bootstrap-icons"
 
 const routes = [
     {
@@ -40,6 +42,11 @@ const routes = [
       path: '/x',
       name: 'X',
       component: X
+    },
+    {
+      path: '/youtube',
+      name: 'Youtube',
+      component: Youtube
     }
   ]
 

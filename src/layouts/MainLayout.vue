@@ -1,10 +1,17 @@
+<script setup lang="ts">
+import { RouterLink } from 'vue-router';
+
+</script>
+
 <template>
     <q-layout view="hHh lpR fFf">
         <q-header elevated class="bg-white text-black shadow-md">
             <div class="q-pa-md row items-center justify-between"
                 style="max-width: 1200px; margin: auto; width: 100%; height: 100%;">
-                <div style="width: 137px; overflow: hidden;">
-                    <img src="../assets/SGI.svg">
+                <div style="width: 137px;">
+                    <RouterLink to="/">
+                        <img src="../assets/SGI.svg">
+                    </RouterLink>
                 </div>
                 <!-- navigation buttons -->
                 <div class="row q-gutter-sm">
@@ -49,6 +56,9 @@
                     </router-link>
                     <router-link to="/instagram" aria-label="Instagram" class="no-decoration q-mx-xs">
                         <font-awesome-icon :icon="['fab', 'instagram']" class="social-icon" />
+                    </router-link>
+                    <router-link to="/youtube" aria-label="Youtube" class="no-decoration q-mx-xs">
+                        <font-awesome-icon :icon="['fab', 'youtube']" class="social-icon" />
                     </router-link>
                 </div>
 

@@ -8,14 +8,17 @@
             <h2 class="title">EQUIPMENT</h2>
             <div class="row items-center justify-between">
               <h2 class="subtitle">{{ slides[currentSlide].subtitle }}</h2>
-              <div class="custom-download-btn">
-                <div class="left">
-                  <font-awesome-icon :icon="['fas', 'file-pdf']" />
+              <a :href="slides[currentSlide].downloadLink" target="_blank" rel="noopener noreferrer"
+                style="outline: none; text-decoration: none;">
+                <div class="custom-download-btn">
+                  <div class="left">
+                    <font-awesome-icon :icon="['fas', 'file-pdf']" />
+                  </div>
+                  <div class="right">
+                    Download
+                  </div>
                 </div>
-                <div class="right">
-                  Download
-                </div>
-              </div>
+              </a>
             </div>
             <div class="description-box">
               <p class="description-text">{{ slides[currentSlide].description }}</p>
@@ -48,28 +51,31 @@ import Slide3 from '../assets/rossfelder.jpg'
 import ico1 from '../assets/ammoIco.svg'
 import ico2 from '../assets/coneIco.svg'
 import ico3 from '../assets/rossIco.svg'
- 
+
 const slides = [
   {
     background: `linear-gradient(rgba(8, 76, 42, 0.9), rgba(8, 76, 42, 0.9)), url(${Slide1})`,
     thumbnail: ico1,
     label: 'Ammonite',
     subtitle: 'AMMONITE',
-    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.'
+    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.',
+    downloadLink: 'https://drive.google.com/file/d/13M5xssxggCPgQxre2tMDvClmT5UkSzCh/view?usp=sharing'
   },
   {
     background: `linear-gradient(rgba(19, 95, 137, 0.9), rgba(19, 95, 137, 0.9)), url(${Slide2})`,
     thumbnail: ico2,
     label: 'Cone',
     subtitle: 'CONE',
-    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.'
+    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.',
+    downloadLink: 'https://drive.google.com/file/d/1e8Sj--dVTjSCGBr9TaFKLwoQrPmqOGr_/view?usp=sharing'
   },
   {
     background: `linear-gradient(rgba(124, 11, 19, 0.9), rgba(124, 11, 19, 0.9)), url(${Slide3})`,
     thumbnail: ico3,
     label: 'Rossfelder P-5',
     subtitle: 'ROSSFELDER P-5 VIBROCORE',
-    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.'
+    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.',
+    downloadLink: 'https://drive.google.com/file/d/11H46l0x1-QJA0B90C739LvT3eSum355M/view?usp=sharing'
   }
 ]
 
@@ -179,6 +185,7 @@ const goToSlide = (index) => {
   background-color: #206988;
   color: white;
   border-radius: 8px;
+  border-right: 10px;
 }
 
 .custom-download-btn:hover {
