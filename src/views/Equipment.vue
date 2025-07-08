@@ -47,10 +47,14 @@ import { ref } from 'vue'
 
 import Slide1 from '../assets/ammonite.jpg'
 import Slide2 from '../assets/cone.jpg'
-import Slide3 from '../assets/rossfelder.jpg'
+import Slide3 from '../assets/thermal.jpg'
+import Slide4 from '../assets/rossfelder.jpg'
+import Slide5 from '../assets/UCM.jpg'
 import ico1 from '../assets/ammoIco.svg'
 import ico2 from '../assets/coneIco.svg'
-import ico3 from '../assets/rossIco.svg'
+import ico3 from '../assets/rossIco2.svg'
+import ico4 from '../assets/thermalIco.svg'
+import ico5 from '../assets/UcmIco.svg'
 
 const slides = [
   {
@@ -58,15 +62,15 @@ const slides = [
     thumbnail: ico1,
     label: 'Ammonite',
     subtitle: 'AMMONITE',
-    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.',
-    downloadLink: 'https://drive.google.com/file/d/13M5xssxggCPgQxre2tMDvClmT5UkSzCh/view?usp=sharing'
+    description: 'Engineered for durability and versatility, our rover is a robust, research-grade platform designed to perform in challenging subsea environments. It can be outfitted with a suite of modular accessories and sensors to supports a wide range of geotechnical and scientific missions.Built to endure, equipped to discover.',
+    downloadLink: 'https://drive.google.com/file/d/18jocZURfyIcVfLQZ1U6P5aqkhzAKnkiC/view?usp=sharing'
   },
   {
     background: `linear-gradient(rgba(19, 95, 137, 0.9), rgba(19, 95, 137, 0.9)), url(${Slide2})`,
     thumbnail: ico2,
     label: 'Cone',
     subtitle: 'CONE',
-    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.',
+    description: 'Not your ordinary seismic cone. A state of the art soil characterization tool designed around ISO 22476-1, delivering high-precision data and seamless integration with a variety of geotechnical accessories.',
     downloadLink: 'https://drive.google.com/file/d/1e8Sj--dVTjSCGBr9TaFKLwoQrPmqOGr_/view?usp=sharing'
   },
   {
@@ -74,8 +78,24 @@ const slides = [
     thumbnail: ico3,
     label: 'Rossfelder P-5',
     subtitle: 'ROSSFELDER P-5 VIBROCORE',
-    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.',
+    description: 'Designed for improved control over penetration depth and vibration frequency, our vibrocoring system and buoyancy frame ensures high quality cores, enabling more reliable data for your offshore projects.',
+    downloadLink: 'https://drive.google.com/file/d/11dYpFP1rN6wwKcmqO6eujyw_s61K4Ab4/view?usp=sharing'
+  },
+  {
+    background: `linear-gradient(rgba(214, 122, 39, 0.9), rgba(214, 122, 39, 0.9)), url(${Slide4})`,
+    thumbnail: ico4,
+    label: 'Thermal Module',
+    subtitle: 'THERMAL MODULE',
+    description: 'Harness the power of in‑situ thermal conductivity testing to get data that truly reflects the seabed in its natural state.',
     downloadLink: 'https://drive.google.com/file/d/11H46l0x1-QJA0B90C739LvT3eSum355M/view?usp=sharing'
+  },
+  {
+    background: `linear-gradient(rgba(97, 38, 211, 0.9), rgba(97, 38, 211, 0.9)), url(${Slide5})`,
+    thumbnail: ico5,
+    label: 'TD-UCM',
+    subtitle: 'TD-UCM',
+    description: 'Versatile, ready, reliable, our all‑in‑one programmable Time-domain Universal Control Module (TD-UCM) will be your best choice when handling various automation, control and data logging needs.',
+    downloadLink: 'https://drive.google.com/file/d/1mvhNh3WpzmHVwc6i-xYmcgsXE6iBSLae/view?usp=sharing'
   }
 ]
 
@@ -144,7 +164,7 @@ const goToSlide = (index) => {
   font-size: 36px;
   font-weight: 700;
   font-family: Roboto, sans-serif;
-  margin-bottom: 20px;
+  margin-bottom: 4px;
 }
 
 .custom-download-btn {
@@ -255,11 +275,11 @@ const goToSlide = (index) => {
   display: flex;
   justify-content: center;
   margin: 40px auto;
-  gap: 189px;
+  gap: 122px;
 }
 
 .equipment-button {
-  width: 274px;
+  width: 500px;
   height: 57px;
   background-color: white;
   border-radius: 8px;

@@ -48,7 +48,7 @@ import { RouterLink } from 'vue-router';
                     <router-link to="/linkedin" aria-label="LinkedIn" class="no-decoration q-mx-xs">
                         <font-awesome-icon :icon="['fab', 'linkedin-in']" class="social-icon" />
                     </router-link>
-                    <router-link to="/facebook" aria-label="Facebook" class="no-decoration q-mx-xs">
+                    <!-- <router-link to="/facebook" aria-label="Facebook" class="no-decoration q-mx-xs">
                         <font-awesome-icon :icon="['fab', 'facebook-f']" class="social-icon" />
                     </router-link>
                     <router-link to="/x" aria-label="X" class="no-decoration q-mx-xs">
@@ -59,7 +59,7 @@ import { RouterLink } from 'vue-router';
                     </router-link>
                     <router-link to="/youtube" aria-label="Youtube" class="no-decoration q-mx-xs">
                         <font-awesome-icon :icon="['fab', 'youtube']" class="social-icon" />
-                    </router-link>
+                    </router-link> -->
                 </div>
 
             </div>
