@@ -69,7 +69,7 @@ import { RouterLink } from 'vue-router';
 
 <style scoped>
 header {
-    height: 11vh;
+    height: 13vh;
 }
 
 footer {

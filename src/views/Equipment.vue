@@ -45,16 +45,16 @@
 <script setup>
 import { ref } from 'vue'
 
-import Slide1 from '../assets/ammonite.jpg'
+import Slide1 from '../assets/ammo2.jpg'
 import Slide2 from '../assets/cone.jpg'
-import Slide3 from '../assets/thermal.jpg'
+import Slide3 from '../assets/ross2.jpg'
 import Slide4 from '../assets/rossfelder.jpg'
 import Slide5 from '../assets/UCM.jpg'
 import ico1 from '../assets/ammoIco.svg'
 import ico2 from '../assets/coneIco.svg'
-import ico3 from '../assets/rossIco2.svg'
-import ico4 from '../assets/thermalIco.svg'
-import ico5 from '../assets/UcmIco.svg'
+import ico3 from '../assets/rossIco3.svg'
+import ico4 from '../assets/thermalIco2.svg'
+import ico5 from '../assets/UcmIco2.svg'
 
 const slides = [
   {
@@ -275,18 +275,18 @@ const goToSlide = (index) => {
   display: flex;
   justify-content: center;
   margin: 40px auto;
-  gap: 122px;
+  gap: 50px;
 }
 
 .equipment-button {
-  width: 500px;
+  width: 600px;
   height: 57px;
   background-color: white;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 10px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
