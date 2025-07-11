@@ -49,7 +49,7 @@
             <div class="col">
              <h3 class="item-subtitle q-mb-xs">Qualified Work Team</h3>
               <p class="description-text q-mb-none">
-                Specialized hardware and expertise in sea ops are tailored to meet our clients needs.
+                Specialized hardware and expertise in sea ops are tailored  to meet our clients needs.
               </p>
             </div>
           </div>
@@ -158,6 +158,7 @@
   font-size: 15pt;
   font-weight: 300;
   font-family: 'Roboto', sans-serif;
+  text-align: justify;
   margin: 0;
 }
 </style>
