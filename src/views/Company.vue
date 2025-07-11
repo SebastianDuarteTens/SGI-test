@@ -15,7 +15,7 @@
           At Seafloor Geotech, we specialize in delivering solutions for offshore ops. We support clients in energy,
           telecommunications, and marine infrastructure with precise site characterization and operational support. We
           also offer a line of proprietary hardware systems engineered to perform in the most demanding underwater
-          environments,ensuring accuracy, reliability, and performance where it matters most.
+          environments, ensuring accuracy, reliability, and performance where it matters most.
         </p>
 
         <!-- Ítems -->
@@ -49,7 +49,7 @@
             <div class="col">
              <h3 class="item-subtitle q-mb-xs">Qualified Work Team</h3>
               <p class="description-text q-mb-none">
-                Specialized hardware and expertise in sea ops are tailored to meet our clients' needs.
+                Specialized hardware and expertise in sea ops are tailored to meet our clients needs.
               </p>
             </div>
           </div>
