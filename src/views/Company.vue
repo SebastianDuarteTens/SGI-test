@@ -4,7 +4,7 @@
 
       <!-- Imagen fija -->
       <div style="width: 400px; height: 660px;">
-        <img src="../assets/SGI2.jpg" alt="Company image" class="full-height"
+        <img src="../assets/SGI3.jpg" alt="Company image" class="full-height"
           style="width: 100%; object-fit: cover; border-radius: 18px;" />
       </div>
 
