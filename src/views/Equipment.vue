@@ -10,7 +10,7 @@
               <h2 class="subtitle">{{ slides[currentSlide].subtitle }}</h2>
               <a :href="slides[currentSlide].downloadLink" target="_blank" rel="noopener noreferrer"
                 style="outline: none; text-decoration: none;">
-                <div class="custom-download-btn">
+                <div class="custom-download-btn" v-show="!$q.screen.xs">
                   <div class="left">
                     <font-awesome-icon :icon="['fas', 'file-pdf']" />
                   </div>
@@ -23,6 +23,17 @@
             <div class="description-box">
               <p class="description-text">{{ slides[currentSlide].description }}</p>
             </div>
+            <a :href="slides[currentSlide].downloadLink" target="_blank" rel="noopener noreferrer"
+                style="outline: none; text-decoration: none;">
+                <div class="custom-download-btn" v-show="$q.screen.xs">
+                  <div class="left">
+                    <font-awesome-icon :icon="['fas', 'file-pdf']" />
+                  </div>
+                  <div class="right">
+                    Download
+                  </div>
+                </div>
+              </a>
           </div>
           <!-- Botones de navegación izquierda y derecha -->
           <div class="nav-button left" @click="prevSlide">‹</div>
@@ -39,7 +50,6 @@
       <img :src="slide.thumbnail" alt="thumbnail" class="equipment-icon" />
     </div>
   </div>
-
 </template>
 
 <script setup>
@@ -326,5 +336,95 @@ const goToSlide = (index) => {
 
 .equipment-button.equipment-disabled .equipment-icon {
   filter: grayscale(100%);
+}
+
+/* Estilos responsive para la pantalla Equipment */
+@media (max-width: 600px) {
+  .equipment-slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 640px;
+}
+
+  .equipment-slider {
+    padding: 0 16px;
+  }
+
+  .slide {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .content {
+    min-width: 100%;
+    padding: 0 16px;
+  }
+
+  .title {
+    font-size: 32pt;
+    margin-bottom: 40px;
+    text-align: left;
+    margin-left: 16px;
+  }
+
+  .subtitle {
+    font-size: 25px;
+    text-align: left;
+    margin-left: 16px;
+    line-height: 1.3;
+  }
+
+  .custom-download-btn {
+    width: 70%;
+    font-size: 14px;
+    margin-top: 25px;
+    margin-left: auto; /* empuja hacia la derecha */
+  margin-right: 16px;
+  }
+
+  .custom-download-btn .left {
+    font-size: 24px;
+  }
+
+  .description-box {
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 20px;
+  }
+
+  .description-text {
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .nav-button {
+    font-size: 40px;
+    padding: 4px 10px;
+  }
+
+ .equipment-navigation {
+  display: flex;
+  flex-wrap: wrap;        /* Permite múltiples líneas */
+  flex-direction: row;    /* Dirección horizontal */
+  gap: 16px;
+  padding: 0 16px;
+  justify-content: center;
+}
+
+.equipment-button {
+  width: calc(50% - 8px); /* Ocupa la mitad menos la mitad del gap */
+}
+
+  .equipment-label {
+    font-size: 16px;
+  }
+
+  .equipment-icon {
+    width: 32px;
+    height: 32px;
+  }
 }
 </style>

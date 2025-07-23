@@ -13,9 +13,9 @@ import 'quasar/src/css/index.sass'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFacebookF, faXTwitter, faInstagram, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faFilePdf, faPhoneVolume, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faFilePdf, faPhoneVolume, faEnvelope, faBars } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faFacebookF, faXTwitter, faInstagram, faLinkedinIn, faFilePdf, faPhoneVolume, faEnvelope, faYoutube)
+library.add(faFacebookF, faXTwitter, faInstagram, faLinkedinIn, faFilePdf, faPhoneVolume, faEnvelope, faYoutube, faBars)
 
 const app = createApp(App)
 

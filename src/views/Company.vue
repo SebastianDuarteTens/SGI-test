@@ -1,15 +1,15 @@
 <template>
-  <div class="q-pa-xl bg-white" style="margin-top: -50px;">
-    <div class="row items-center" style="max-width: 1200px;">
+  <q-page class="q-pa-xl q-px-md q-px-sm-xs company-page-content bg-white">
+    <div class="row items-center row-reverse-mobile" style="max-width: 1200px;">
 
       <!-- Imagen fija -->
-      <div style="width: 400px; height: 660px;">
+      <div class="image-column" style="width: 400px; height: 660px;">
         <img src="../assets/SGI3.jpg" alt="Company image" class="full-height"
-          style="width: 100%; object-fit: cover; border-radius: 18px;" />
+          style="width: 100%; object-fit: cover; border-radius: 18px; display: block;" />
       </div>
 
       <!-- Contenido derecho -->
-      <div class="q-ml-xl column q-gutter-md" style="flex: 1;">
+      <div class="q-ml-xl column q-gutter-md text-column" style="flex: 1;">
         <h2 class="company">THE COMPANY</h2>
         <p class="description-text">
           At Seafloor Geotech, we specialize in delivering solutions for offshore ops. We support clients in energy,
@@ -47,9 +47,9 @@
               <img src="../assets/ico_team.svg" class="my-icon" alt="Team Icon" style="margin-top: 30px;" />
             </div>
             <div class="col">
-             <h3 class="item-subtitle q-mb-xs">Qualified Work Team</h3>
+              <h3 class="item-subtitle q-mb-xs">Qualified Work Team</h3>
               <p class="description-text q-mb-none">
-                Specialized hardware and expertise in sea ops are tailored  to meet our clients needs.
+                Specialized hardware and expertise in sea ops are tailored to meet our clients needs.
               </p>
             </div>
           </div>
@@ -59,31 +59,30 @@
               <img src="../assets/ico_eco.svg" class="my-icon" alt="Eco Icon" style="margin-top: 35px;" />
             </div>
             <div class="col">
-            <h3 class="item-subtitle q-mb-xs">Sustainable Technology</h3>
+              <h3 class="item-subtitle q-mb-xs">Sustainable Technology</h3>
               <p class="description-text q-mb-none">
                 Low impact to the environment is at the heart of our proprietary hardware design and operations.
               </p>
             </div>
           </div>
 
-           <div class="row items-start q-gutter-md">
+          <div class="row items-start q-gutter-md">
             <div class="icon-container">
               <img src="../assets/ico_vision.svg" class="my-icon" alt="Vision Icon" style="margin-top: 50px;" />
             </div>
             <div class="col">
-            <h3 class="item-subtitle q-mb-xs">Looking To The Future</h3>
+              <h3 class="item-subtitle q-mb-xs">Looking To The Future</h3>
               <p class="description-text q-mb-none">
-                Rooted in science and driven by innovation, we continuously refine our technologies and methodologies to
-                meet the evolving demands of offshore and subsea industries.
+                Rooted in science and driven by innovation, we continuously refine our technologies and methodologies
+                to meet the evolving demands of offshore and subsea industries.
               </p>
             </div>
           </div>
-
         </div>
 
       </div>
     </div>
-  </div>
+  </q-page>
 </template>
 
 <style lang="css" scoped>
@@ -130,6 +129,9 @@
   align-items: center;
   align-content: center;
 } */
+.company-page-content {
+  padding-top: 0;
+}
 
 .icon-container {
   display: flex;
@@ -160,5 +162,90 @@
   font-family: 'Roboto', sans-serif;
   text-align: justify;
   margin: 0;
+  margin-top: -10px;
+}
+
+/* @media (max-width: 600px) {
+  .company {
+    font-size: 32pt;
+    text-align: center;
+    margin-left: 0;
+    opacity: 1;
+  }
+
+  .description-text {
+    font-size: 13pt;
+    text-align: left;
+  }
+
+  .row.items-center {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .q-ml-xl {
+    margin-left: 0 !important;
+  }
+
+  .my-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon-container {
+    min-width: 40px;
+  }
+} */
+
+/* @media (max-width: 1200px) {
+  .company-page-content {
+    margin-top: 13vh;
+  }
+} */
+
+@media (max-width: 600px) {
+  .company {
+    font-size: 35pt;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .description-text {
+    font-size: 12pt;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .item-subtitle {
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .row-reverse-mobile {
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+  }
+
+
+  .q-ml-xl {
+    margin-left: 0 !important;
+  }
+
+  .text-column {
+    width: 100%;
+  }
+
+  .image-column {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .full-height {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 18px !important;
+  }
 }
 </style>

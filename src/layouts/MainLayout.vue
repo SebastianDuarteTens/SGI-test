@@ -1,5 +1,8 @@
-<script setup lang="ts">
+<script setup>
 import { RouterLink } from 'vue-router';
+import { ref } from 'vue'
+
+const leftDrawerOpen = ref(false)
 
 </script>
 
@@ -13,8 +16,32 @@ import { RouterLink } from 'vue-router';
                         <img src="../assets/SGI.svg">
                     </RouterLink>
                 </div>
+                <q-btn v-show="$q.screen.xs" flat dense round @click="leftDrawerOpen = true" class="q-ml-sm barsIcon"  style="margin-left: auto;">
+                    <font-awesome-icon :icon="['fas', 'bars']" />
+                </q-btn>
+
+                <q-drawer v-show="$q.screen.xs" v-model="leftDrawerOpen" side="right" overlay bordered behavior="mobile" class="bg-white">
+                    <q-list padding>
+                        <q-item clickable v-ripple to="/" :active="$route.path === '/'"
+                            active-class="drawer-active-item">
+                            <q-item-section>Home</q-item-section>
+                        </q-item>
+                        <q-item clickable v-ripple to="/company" :active="$route.path === '/company'"
+                            active-class="drawer-active-item">
+                            <q-item-section>Company</q-item-section>
+                        </q-item>
+                        <q-item clickable v-ripple to="/equipment" :active="$route.path === '/equipment'"
+                            active-class="drawer-active-item">
+                            <q-item-section>Equipment</q-item-section>
+                        </q-item>
+                        <q-item clickable v-ripple to="/contact" :active="$route.path === '/contact'"
+                            active-class="drawer-active-item">
+                            <q-item-section>Contact</q-item-section>
+                        </q-item>
+                    </q-list>
+                </q-drawer>
                 <!-- navigation buttons -->
-                <div class="row q-gutter-sm">
+                <div class="row q-gutter-sm" v-show="!$q.screen.xs">
                     <q-btn class="navBtn" flat unelevated :class="$route.path === '/' ? 'active-link' : ''"
                         :ripple="false" label="Home" to="/"
                         style="color: #206988; padding: 20px; font-style: normal;" />
@@ -68,9 +95,9 @@ import { RouterLink } from 'vue-router';
 </template>
 
 <style scoped>
-header {
+/* header {
     height: 13vh;
-}
+} */
 
 footer {
     height: 8vh;
@@ -127,5 +154,30 @@ a:visited {
     text-underline-offset: 4px;
     text-decoration-thickness: 2px;
     font-weight: bold;
+}
+
+.barsIcon {
+  font-size: 2rem;
+  color: #206988;
+  margin-right: 0;
+}
+
+.q-drawer {
+    color: #206988;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.q-drawer .q-item__label,
+.q-drawer .q-item__section {
+    color: #206988 !important;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.drawer-active-item {
+    background-color: #e6f3f9 !important;
+    border-left: 4px solid #206988;
+    color: #206988 !important;
+    font-weight: bold;
+    border-radius: 5px;
 }
 </style>

@@ -1,10 +1,11 @@
 <template>
-  <div class="q-pa-xl bg-white" style="width: 100vw; height: auto;">
+  <q-page class="q-pa-xl q-px-md q-px-sm-xs bg-white contact-page">
     <div class="watermark"></div>
     <div class="row q-col-gutter-xl content-wrapper">
 
       <!-- Columna izquierda: Información de contacto -->
       <div class="col-12 col-md-4 column q-gutter-lg" style="margin-top: 0; margin-left: -68px; margin-right: 42px;">
+        <h2 class="contact mobile-title q-mb-md" v-show="$q.screen.xs">CONTACT US</h2>
         <div class="row no-wrap items-center q-gutter-md">
           <div class="phoneContainer">
             <q-icon class="iconContact">
@@ -32,7 +33,7 @@
 
       <!-- Columna derecha: Formulario -->
       <div class="col-12 col-md-8 column q-gutter-md" style="margin-right: -50px;">
-        <h2 class="contact q-mb-md">CONTACT US</h2>
+        <h2 class="contact q-mb-md" v-show="!$q.screen.xs">CONTACT US</h2>
 
         <q-form :key="formKey" ref="formRef" @submit.prevent="sendEmail" class="q-gutter-md">
           <!-- Fila para nombre y email -->
@@ -71,13 +72,15 @@
           </div>
 
           <!-- Botón enviar -->
-          <q-btn type="submit" label="Send Message" class="btn-form" :loading="sending" :disable="sending" />
+          <div class="form-btn-wrapper">
+            <q-btn type="submit" label="Send Message" class="btn-form" :loading="sending" :disable="sending" />
+          </div>
         </q-form>
 
       </div>
 
     </div>
-  </div>
+  </q-page>
 </template>
 
 <script setup>
@@ -165,8 +168,6 @@ async function sendEmail() {
 .watermark {
   content: "";
   position: absolute;
-  top: 25%;
-  left: 10%;
   width: 900px;
   height: 500px;
   background-image: url('/public/SGI.svg');
@@ -206,7 +207,7 @@ async function sendEmail() {
   opacity: 40%;
   margin-top: -40px;
   margin-bottom: 10px;
-  margin-left: 350px;
+  margin-left: 250px;
 }
 
 .subtitle-call {
@@ -251,8 +252,12 @@ async function sendEmail() {
   height: 150px;
 }
 
+.form-btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .btn-form {
-  margin-left: 587px;
   background-color: #8F1313;
   color: white;
   font-weight: 300;
@@ -261,5 +266,78 @@ async function sendEmail() {
   border-radius: 10px;
   box-shadow: none;
   text-transform: none;
+}
+
+@media (max-width: 600px) {
+  .content-wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+    flex-direction: column;
+  }
+
+  .contact {
+    font-size: 35pt;
+    margin-top: 0;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .subtitle-call,
+  .subtitle-email {
+    font-size: 16pt;
+    text-align: left;
+  }
+
+  .description {
+    font-size: 13pt;
+    text-align: left;
+  }
+
+  .input,
+  .textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .form-btn-wrapper {
+    justify-content: center;
+  }
+
+  .btn-form {
+    width: 60%;
+    font-size: 16px;
+  }
+
+  .phoneContainer,
+  .emailContainer {
+    width: 44px;
+    height: 44px;
+  }
+
+  .iconContact {
+    font-size: 24px;
+  }
+
+  .col-12.col-md-4.column,
+  .col-12.col-md-8.column {
+    margin-top: 12px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 8px;
+  }
+
+  .row.no-wrap.items-center.q-gutter-md {
+    gap: 12px;
+    margin-top: -10px;
+  }
+
+  .watermark {
+    width: 400px;
+    background-size: contain;
+  }
+
+  .contact-section {
+    padding-top: 24px;
+  }
 }
 </style>
