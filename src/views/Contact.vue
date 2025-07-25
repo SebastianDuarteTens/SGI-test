@@ -14,11 +14,11 @@
           </div>
           <div>
             <h3 class="text-subtitle1 q-mb-xs subtitle-call">Call Us</h3>
-            <p class="text-body2 q-mb-none description">+1 800 123 4567</p>
+            <p class="text-body2 q-mb-none description">+1 (562) 822-6564</p>
           </div>
         </div>
 
-        <div class="row no-wrap items-center q-gutter-md">
+        <div class="row no-wrap items-center q-gutter-md" style="margin-right: 65px;">
           <div class="emailContainer">
             <q-icon class="iconContact">
               <font-awesome-icon :icon="['fas', 'envelope']" />
