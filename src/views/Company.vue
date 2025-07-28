@@ -96,39 +96,6 @@
   margin-left: 0px;
 }
 
-/* .my-icon {
-  height: 10px;
-  margin-right: 16px;
-  display: flex;
-  align-items: flex-start;
-}
-
-.item-subtitle {
-  color: #1F6887;
-  font-size: 20px;
-  font-weight: 600;
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-}
-
-.description-text {
-  color: #666666;
-  font-size: 15pt;
-  font-weight: 300;
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-} */
-
-/* .my-icon {
-  width: 50px;
-  height: 50px;
-  min-width: 50px;
-  margin-right: 16px;
-  flex-shrink: 0;
-  display: block;
-  align-items: center;
-  align-content: center;
-} */
 .company-page-content {
   padding-top: 0;
 }
@@ -165,43 +132,6 @@
   margin-top: -10px;
 }
 
-/* @media (max-width: 600px) {
-  .company {
-    font-size: 32pt;
-    text-align: center;
-    margin-left: 0;
-    opacity: 1;
-  }
-
-  .description-text {
-    font-size: 13pt;
-    text-align: left;
-  }
-
-  .row.items-center {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .q-ml-xl {
-    margin-left: 0 !important;
-  }
-
-  .my-icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .icon-container {
-    min-width: 40px;
-  }
-} */
-
-/* @media (max-width: 1200px) {
-  .company-page-content {
-    margin-top: 13vh;
-  }
-} */
 
 @media (max-width: 600px) {
   .company {
@@ -248,4 +178,94 @@
     border-radius: 18px !important;
   }
 }
+
+@media (max-width: 768px) {
+  .company {
+    font-size: 38pt;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .description-text {
+    font-size: 13pt;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .item-subtitle {
+    font-size: 18px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .text-column,
+  .image-column {
+    width: 100%;
+  }
+
+  .image-column {
+    margin-top: 24px;
+  }
+
+  .full-height {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .company {
+    font-size: 42pt;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .description-text {
+    font-size: 14pt;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .item-subtitle {
+    font-size: 19px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .text-column,
+  .image-column {
+    width: 100%;
+  }
+
+  .full-height {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .company {
+    font-size: 46pt;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .description-text {
+    font-size: 15pt;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .item-subtitle {
+    font-size: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .full-height {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
 </style>

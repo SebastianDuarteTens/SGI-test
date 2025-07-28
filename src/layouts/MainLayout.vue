@@ -16,11 +16,11 @@ const leftDrawerOpen = ref(false)
                         <img src="../assets/SGI.svg">
                     </RouterLink>
                 </div>
-                <q-btn v-show="$q.screen.xs" flat dense round @click="leftDrawerOpen = true" class="q-ml-sm barsIcon"  style="margin-left: auto;">
+                <q-btn v-show="$q.screen.width <= 670" flat dense round @click="leftDrawerOpen = true" class="q-ml-sm barsIcon"  style="margin-left: auto;">
                     <font-awesome-icon :icon="['fas', 'bars']" />
                 </q-btn>
 
-                <q-drawer v-show="$q.screen.xs" v-model="leftDrawerOpen" side="right" overlay bordered behavior="mobile" class="bg-white">
+                <q-drawer v-show="$q.screen.width <= 670" v-model="leftDrawerOpen" side="right" overlay bordered behavior="mobile" class="bg-white">
                     <q-list padding>
                         <q-item clickable v-ripple to="/" :active="$route.path === '/'"
                             active-class="drawer-active-item">
@@ -41,7 +41,7 @@ const leftDrawerOpen = ref(false)
                     </q-list>
                 </q-drawer>
                 <!-- navigation buttons -->
-                <div class="row q-gutter-sm" v-show="!$q.screen.xs">
+                <div class="row q-gutter-sm" v-show="$q.screen.width > 670">
                     <q-btn class="navBtn" flat unelevated :class="$route.path === '/' ? 'active-link' : ''"
                         :ripple="false" label="Home" to="/"
                         style="color: #206988; padding: 20px; font-style: normal;" />
@@ -99,8 +99,21 @@ const leftDrawerOpen = ref(false)
     height: 13vh;
 } */
 
+.q-page {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 8vh); /* Deja espacio para el footer */
+  padding-bottom: 8vh; /* Asegura que el contenido no se superponga */
+}
+
 footer {
     height: 8vh;
+}
+
+.q-layout__footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .navBtn:hover {
@@ -180,4 +193,108 @@ a:visited {
     font-weight: bold;
     border-radius: 5px;
 }
+
+/* === MÓVILES PEQUEÑOS (≤ 480px) === */
+@media (max-width: 480px) {
+  footer {
+    height: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .company {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .rights {
+    font-size: 0.75rem;
+    text-align: left;
+  }
+
+  .social-icon {
+    font-size: 1.5rem;
+  }
+
+  .navBtn {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .barsIcon {
+    font-size: 1.6rem;
+    margin-right: 0;
+    padding: 6px;
+  }
+
+  .column {
+    margin-top: 2vh;
+  }
+}
+
+/* === MÓVILES GRANDES (481px – 600px) === */
+@media (min-width: 481px) and (max-width: 600px) {
+  footer {
+    height: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .company {
+    font-size: 1.1rem;
+    text-align: left;
+  }
+
+  .rights {
+    font-size: 0.8rem;
+    text-align: left;
+  }
+
+  .navBtn {
+    font-size: 15px;
+  }
+
+  .social-icon {
+    font-size: 1.6rem;
+  }
+
+  .barsIcon {
+    font-size: 1.8rem;
+    margin-right: 0;
+    padding: 8px;
+  }
+}
+
+/* === TABLETS PEQUEÑOS (601px – 768px) === */
+@media (min-width: 601px) and (max-width: 768px) {
+  .barsIcon {
+    font-size: 2rem;
+    margin-right: 0;
+    padding: 10px;
+  }
+}
+
+/* === TABLETS (601px – 900px) === */
+@media (min-width: 601px) and (max-width: 900px) {
+  .navBtn {
+    font-size: 16px;
+    padding: 12px 16px;
+  }
+
+  .social-icon {
+    font-size: 1.8rem;
+  }
+}
+
+/* === LAPTOPS PEQUEÑOS (901px – 1280px) === */
+@media (min-width: 901px) and (max-width: 1280px) {
+  .navBtn {
+    font-size: 17px;
+  }
+
+  .social-icon {
+    font-size: 1.9rem;
+  }
+}
+
 </style>

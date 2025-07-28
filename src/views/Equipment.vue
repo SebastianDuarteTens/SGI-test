@@ -427,4 +427,122 @@ const goToSlide = (index) => {
     height: 32px;
   }
 }
+
+@media (max-width: 768px) {
+  .equipment-slider-container {
+    height: 640px;
+  }
+
+  .title {
+    font-size: 34pt;
+    margin-left: 24px;
+  }
+
+  .subtitle {
+    font-size: 28px;
+    margin-left: 24px;
+  }
+
+  .custom-download-btn {
+    width: 70%;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-right: 24px;
+  }
+
+  .description-box {
+    margin: 0 24px;
+    padding: 24px;
+  }
+
+  .equipment-navigation {
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 0 24px;
+  }
+
+  .equipment-button {
+    width: calc(50% - 12px);
+  }
+
+  .equipment-label {
+    font-size: 17px;
+  }
+
+  .equipment-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content {
+    min-width: 100%;
+    padding: 0 32px;
+  }
+
+  .title {
+    font-size: 38pt;
+    margin-left: 32px;
+  }
+
+  .subtitle {
+    font-size: 30px;
+    margin-left: 32px;
+  }
+
+  .custom-download-btn {
+    width: 60%;
+    margin-right: 32px;
+  }
+
+  .description-box {
+    margin: 0 32px;
+  }
+
+  .equipment-navigation {
+    gap: 32px;
+    padding: 0 32px;
+  }
+
+  .equipment-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .content {
+    min-width: 100%;
+    padding: 0 40px;
+  }
+
+  .title {
+    font-size: 44pt;
+    margin-left: 40px;
+  }
+
+  .subtitle {
+    font-size: 32px;
+    margin-left: 40px;
+  }
+
+  .custom-download-btn {
+    width: 50%;
+    margin-right: 40px;
+  }
+
+  .description-box {
+    margin: 0 40px;
+  }
+
+  .equipment-navigation {
+    padding: 0 40px;
+    gap: 40px;
+  }
+
+  .equipment-button {
+    width: 100%;
+  }
+}
+
 </style>

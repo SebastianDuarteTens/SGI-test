@@ -21,9 +21,42 @@ body {
   min-height: 100vh;
 }
 
+/* Para móviles pequeños: scroll vertical habilitado */
 @media (max-width: 600px) {
   html, body {
     overflow-y: auto;
     height: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* Para tablets verticales */
+@media (max-width: 768px) {
+  html, body {
+    overflow-y: auto;
+    height: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* Para tablets horizontales o laptops pequeños */
+@media (max-width: 1024px) {
+  html, body {
+    overflow-y: auto;
+    height: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+/* Para laptops medianos o desktop compactos */
+@media (max-width: 1280px) {
+  html, body {
+    overflow-y: auto;
+    height: auto;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }

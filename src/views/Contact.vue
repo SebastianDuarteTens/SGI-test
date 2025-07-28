@@ -340,4 +340,130 @@ async function sendEmail() {
     padding-top: 24px;
   }
 }
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 0 20px;
+  }
+
+  .contact {
+    font-size: 38pt;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .subtitle-call,
+  .subtitle-email {
+    font-size: 17pt;
+  }
+
+  .description {
+    font-size: 14pt;
+  }
+
+  .input,
+  .textarea {
+    font-size: 14px;
+  }
+
+  .btn-form {
+    width: 70%;
+    font-size: 16px;
+  }
+
+  .phoneContainer,
+  .emailContainer {
+    width: 46px;
+    height: 46px;
+  }
+
+  .iconContact {
+    font-size: 26px;
+  }
+
+  .watermark {
+    width: 500px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content-wrapper {
+    padding: 0 40px;
+  }
+
+  .contact {
+    font-size: 42pt;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .subtitle-call,
+  .subtitle-email {
+    font-size: 18pt;
+  }
+
+  .description {
+    font-size: 15pt;
+  }
+
+  .btn-form {
+    width: 50%;
+    font-size: 17px;
+  }
+
+  .phoneContainer,
+  .emailContainer {
+    width: 48px;
+    height: 48px;
+  }
+
+  .iconContact {
+    font-size: 26px;
+  }
+
+  .watermark {
+    width: 600px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .content-wrapper {
+    padding: 0 60px;
+  }
+
+  .contact {
+    font-size: 46pt;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .subtitle-call,
+  .subtitle-email {
+    font-size: 19pt;
+  }
+
+  .description {
+    font-size: 15.5pt;
+  }
+
+  .btn-form {
+    width: 40%;
+    font-size: 17px;
+  }
+
+  .phoneContainer,
+  .emailContainer {
+    width: 50px;
+    height: 50px;
+  }
+
+  .iconContact {
+    font-size: 28px;
+  }
+
+  .watermark {
+    width: 700px;
+  }
+}
+
 </style>

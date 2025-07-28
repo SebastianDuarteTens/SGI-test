@@ -52,6 +52,106 @@
     left: 15%;
   }
 }
+
+/* === MÓVILES PEQUEÑOS (≤ 480px) === */
+@media (max-width: 480px) {
+  .hero-logo {
+    max-width: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hero-text {
+    font-size: 18px;
+    text-align: center;
+    padding: 0 16px;
+  }
+
+  .column {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    align-items: center;
+    text-align: center;
+    margin-top: 15vh !important;
+  }
+}
+
+/* === MÓVILES GRANDES (481px – 600px) === */
+@media (min-width: 481px) and (max-width: 600px) {
+  .hero-logo {
+    max-width: 250px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hero-text {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .column {
+    padding-left: 24px;
+    padding-right: 24px;
+    align-items: center;
+    margin-top: 18vh;
+  }
+}
+
+/* === TABLETS (601px – 900px) === */
+@media (min-width: 601px) and (max-width: 900px) {
+  .hero-logo {
+    max-width: 280px;
+    left: 20%;
+  }
+
+  .hero-text {
+    font-size: 24px;
+  }
+
+  .column {
+    padding-left: 32px;
+    padding-right: 32px;
+    margin-top: 20vh;
+  }
+}
+
+/* === LAPTOPS PEQUEÑOS (901px – 1280px) === */
+@media (min-width: 901px) and (max-width: 1280px) {
+  .hero-logo {
+    max-width: 300px;
+    left: 15%;
+  }
+
+  .hero-text {
+    font-size: 28px;
+  }
+
+  .column {
+    padding-left: 48px;
+    padding-right: 48px;
+    margin-top: 22vh;
+  }
+}
+
+/* === ESCRITORIOS GRANDES (> 1280px) === */
+@media (min-width: 1281px) {
+  .hero-logo {
+    max-width: 320px;
+    left: 25%;
+  }
+
+  .hero-text {
+    font-size: 32px;
+  }
+
+  .column {
+    padding-left: 64px;
+    padding-right: 64px;
+    margin-top: 25vh;
+  }
+}
+
 </style>
 
 <style>
